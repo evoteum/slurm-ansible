@@ -1,0 +1,16 @@
+all:
+  hosts:
+    slurm-01:
+      ansible_host: 01.nodes.production.slurm.evoteum.com
+    slurm-02:
+      ansible_host: 02.nodes.production.slurm.evoteum.com
+    slurm-03:
+      ansible_host: 03.nodes.production.slurm.evoteum.com
+  children:
+    controller:
+      hosts:
+        slurm-01:
+    exec:
+      hosts:
+        slurm-02:
+        slurm-03:

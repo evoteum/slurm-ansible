@@ -1,0 +1,12 @@
+---
+- name: Align hostnames
+  hosts: all
+  roles:
+    - align_hostname
+
+- name: Configure SLURM cluster
+  hosts: all
+  become: true
+  gather_facts: true
+  roles:
+    - galaxyproject.slurm

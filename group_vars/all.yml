@@ -1,0 +1,5 @@
+slurm_config:
+  AccountingStorageType: "accounting_storage/none"
+  ClusterName: evoteum-slurm
+slurm_control_host: slurm-01
+slurm_control_addr: 01.nodes.production.slurm.evoteum.com
